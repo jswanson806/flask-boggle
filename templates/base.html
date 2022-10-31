@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boggle</title>
+</head>
+
+<body>
+    <h1>Boggle</h1>
+    <section class="display-area">
+        <h3>Make words!</h3>
+        <div id="board">
+            <section id="boggle"></section>
+                <table class ="board">
+                    <tbody>
+                    {% for row in board %}
+                    <tr>
+                        {% for cell in row %}
+                        <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div class="form">
+            <form method="POST" id="word-form" >
+                <input id="form-input" name="word" type="text" placeholder="Enter Word" autofocus>
+                <button>Enter</button>
+            </form>
+        </div>
+        <div class="timer">
+            <div id="timer">
+                <!-- The timer will go here -->
+            </div>
+        </div>
+            <div class="score-display">
+                <h3 class="score">
+                    <!-- score will go here -->
+                </h3>
+            </div>
+    </section>
+    <p class="msg">
+        <!-- msg to user will display here -->
+    </p>
+
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script>
+
+<script src="/static/app.js"></script>
+</body>
+
+</html>
