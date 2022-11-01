@@ -5,6 +5,8 @@ from flask import Flask, render_template, session, jsonify, request
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'abc123'
+app.config['TESTING'] = True
+app.config['DEBUG_TB_HOSTS'] = ['dont-show-debug-toolbar']
 boggle_game = Boggle()
 
 
